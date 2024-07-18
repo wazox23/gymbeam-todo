@@ -1,0 +1,19 @@
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #6610f2; /* Primary color */
+    --secondary-bg-color: #f8f9fa; /* Secondary background color */
+    --border-color: #dee2e6; /* Border color */
+    --completed-color: #d4edda; /* Completed item background color */
+    --modal-bg-color: #ffffff; /* Modal background color */
+}
+
+[data-theme="dark"] {
+    --background-color: #343a40;
+    --text-color: #f8f9fa;
+    --primary-color: #6610f2;
+    --secondary-bg-color: #495057;
+    --border-color: #6c757d;
+    --completed-color: #155724;
+    --modal-bg-color: #6c757d;
+}

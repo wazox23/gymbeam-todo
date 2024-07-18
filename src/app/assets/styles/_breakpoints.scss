@@ -1,0 +1,29 @@
+@import "./variables.scss";
+
+// Small devices
+@mixin sm {
+    @media (min-width: #{$b-sm}) {
+        @content;
+    }
+}
+
+// Medium devices
+@mixin md {
+    @media (min-width: #{$b-md}) {
+        @content;
+    }
+}
+
+// Large devices
+@mixin lg {
+    @media (min-width: #{$b-lg}) {
+        @content;
+    }
+}
+
+// Extra large devices
+@mixin xl {
+    @media (min-width: #{$b-xl}) {
+        @content;
+    }
+}

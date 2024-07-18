@@ -1,0 +1,29 @@
+/* stylelint-disable max-line-length */
+@use "sass:math";
+// strip units
+@function strip-unit($value) {
+    @return math.div($value, $value * 0 + 1);
+}
+
+// fluid calculation
+@mixin fluid-calc($param, $min-vw, $max-vw, $min-value, $max-value) {
+    /* stylelint-disable declaration-property-unit-allowed-list */
+    #{$param}: calc(
+        #{$min-value} + #{strip-unit($max-value - $min-value)} *
+            ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+    );
+    /* stylelint-enable declaration-property-unit-allowed-list */
+}
+
+// fluid typography, media queries included
+@mixin fluid($param, $min-vw, $max-vw, $min-value, $max-value) {
+    #{$param}: $min-value;
+
+    @media (min-width: $min-vw) {
+        @include fluid-calc($param, $min-vw, $max-vw, $min-value, $max-value);
+    }
+
+    @media (min-width: $max-vw) {
+        #{$param}: $max-value;
+    }
+}

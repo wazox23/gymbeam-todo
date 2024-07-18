@@ -1,0 +1,71 @@
+/* stylelint-disable function-no-unknown */
+@charset "UTF-8";
+@use "sass:color";
+
+$c-black: #000;
+$c-white: #fff;
+$c-white-07: #ffffffb3;
+
+$c-button: #5f75d8;
+$c-button-hover: #5164bb;
+
+$c-primary: #5b45ff;
+
+$c-lime: #e5ff54;
+$c-light-blue: #cdebeb;
+$c-light-pink: #ffeaed;
+$c-light-orange: #faeaae;
+$c-slate: #fafafa;
+$c-slate-dark: #dfdfdf;
+$c-secondary: #d9f8b2;
+$c-primary-bg: #070413;
+$c-secondary-bg: #ebe9e9;
+
+$c-light-gradient: linear-gradient(
+    to right top,
+    #ffeef8,
+    #f5c6f0,
+    #eacdf8,
+    #dfd4fd,
+    #eaecff,
+    #d9dfff,
+    #dce4ff,
+    #dfe8ff,
+    #e9edff,
+    #caceff,
+    #d6d6ff,
+    #dbfbff
+);
+$c-primary-gradient: linear-gradient(to bottom, #5b45ff, #28164b);
+$c-white-yellow-gradient: linear-gradient(
+    to right top,
+    #ffffff,
+    #fff6ff,
+    #ffebee,
+    #ffe6cc,
+    #ffebae,
+    #ffebae,
+    #ffebae,
+    #ffebae,
+    #ffe6cc,
+    #ffebee,
+    #fff6ff,
+    #ffffff
+);
+$c-slate-gradient: linear-gradient(
+    to right top,
+    #ffffff,
+    #f1f1f1,
+    #ffffff,
+    #ebeaff
+);
+$c-green-gradient: linear-gradient(
+    to right top,
+    rgba(241, 255, 249, 1) 0%,
+    rgba(59, 255, 170, 1) 32%,
+    rgba(59, 255, 170, 1) 61%,
+    rgba(179, 255, 245, 1) 84%,
+    rgba(255, 255, 255, 1) 100%
+);
+
+$bs-header: 0 4px 9px 0 rgb(0 0 0 / 12%);

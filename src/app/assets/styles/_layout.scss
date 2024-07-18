@@ -1,0 +1,143 @@
+@import "./breakpoints.scss";
+@import "./variables.scss";
+@import "./utils.scss";
+
+.container {
+    @include fluid("padding-left", 320px, 1440px, 16px, 24px);
+    @include fluid("padding-right", 320px, 1440px, 16px, 24px);
+
+    width: 100%;
+    max-width: $page-max-width;
+    margin: 0 auto;
+}
+
+.container--hero {
+    @include fluid("padding-left", 320px, 1440px, 16px, 24px);
+    @include fluid("padding-right", 320px, 1440px, 16px, 24px);
+
+    width: 100%;
+    max-width: $page-max-width-hero;
+    margin: 0 auto;
+}
+
+.componentMargin {
+    &__top {
+        &--none {
+            margin-top: 0;
+        }
+
+        &--2xs {
+            margin-top: 16px;
+        }
+
+        &--xs {
+            margin-top: 24px;
+        }
+
+        &--sm {
+            margin-top: 32px;
+        }
+
+        &--md {
+            margin-top: 40px;
+        }
+
+        &--md-lg {
+            margin-top: 40px;
+
+            @include lg {
+                margin-top: 48px;
+            }
+        }
+
+        &--lg {
+            margin-top: 40px;
+
+            @include lg {
+                margin-top: 64px;
+            }
+        }
+
+        &--xl {
+            margin-top: 40px;
+
+            @include lg {
+                margin-top: 80px;
+            }
+        }
+
+        &--2xl {
+            margin-top: 160px;
+
+            @include lg {
+                margin-bottom: 240px;
+            }
+        }
+    }
+
+    &__bottom {
+        &--none {
+            margin-bottom: 0;
+        }
+
+        &--2xs {
+            margin-bottom: 16px;
+        }
+
+        &--xs {
+            margin-bottom: 24px;
+        }
+
+        &--sm {
+            margin-bottom: 32px;
+        }
+
+        &--md {
+            margin-bottom: 40px;
+        }
+
+        &--md-lg {
+            margin-bottom: 40px;
+
+            @include lg {
+                margin-bottom: 48px;
+            }
+        }
+
+        &--lg {
+            margin-bottom: 40px;
+
+            @include lg {
+                margin-bottom: 64px;
+            }
+        }
+
+        &--xl {
+            margin-bottom: 40px;
+
+            @include lg {
+                margin-bottom: 80px;
+            }
+        }
+
+        &--2xl {
+            margin-bottom: 160px;
+
+            @include lg {
+                margin-bottom: 240px;
+            }
+        }
+    }
+}
+
+.flex {
+    display: flex;
+
+    &--justify-center {
+        justify-content: center;
+    }
+
+    &--align-center {
+        align-items: center;
+    }
+}

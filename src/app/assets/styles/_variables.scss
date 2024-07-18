@@ -1,0 +1,44 @@
+/* stylelint-disable function-no-unknown */
+@charset "UTF-8";
+
+// page size
+// Page max width for this project is 1440px, and the intended
+// width of the content is 1120px
+
+$b-sm: 576px;
+$b-md: 768px;
+$b-lg: 992px;
+$b-xl: 1200px;
+$b-2xl: 1400px;
+
+$page-max-width: 1440px;
+$page-max-width-footer: 1440px;
+$page-max-width-slider: 1600px;
+$page-max-width-hero: 1600px;
+$page-max-width-header: 1600px;
+
+// font
+$f-base-font-family: "Inter", sans-serif;
+$f-base-font-size: fluid-type(320px, 1280px, 15px, 17px);
+$f-base-line-height: 1.3;
+$f-line-height-text: 1.3;
+
+$f-weight-light: 300;
+$f-weight-regular: 400;
+$f-weight-medium: 500;
+$f-weight-thick: 600;
+$f-weight-bold: 700;
+$f-weight-black-font: 900;
+
+// animations: duration
+$d-extrashort: 0.1s;
+$d-short: 0.3s;
+$d-medium: 0.6s;
+$d-long: 0.9s;
+$d-extralong: 1.8s;
+$d-animationDelay: 0.15s;
+
+// animations: easing
+$e-ease: ease;
+$e-cubic: cubic-bezier(0.32, 0.24, 0.15, 1);
+$e-easeExponential: cubic-bezier(0.19, 1, 0.22, 1);

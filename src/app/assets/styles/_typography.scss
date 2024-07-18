@@ -1,0 +1,249 @@
+@import "./variables.scss";
+@import "./breakpoints.scss";
+
+.d1 {
+    font-size: 64px;
+    font-weight: $f-weight-black-font;
+    letter-spacing: -1.92px;
+    line-height: 110%;
+
+    &--medium {
+        font-weight: $f-weight-medium;
+    }
+
+    @include lg {
+        font-size: 96px;
+    }
+}
+
+.d2 {
+    font-size: 48px;
+    font-weight: $f-weight-black-font;
+    letter-spacing: -1.44px;
+    line-height: 110%;
+
+    &--medium {
+        font-weight: $f-weight-medium;
+    }
+
+    @include lg {
+        font-size: 72px;
+    }
+}
+
+@mixin define-h1 {
+    position: relative;
+    margin-bottom: 24px;
+    font-size: 32px;
+    font-weight: $f-weight-bold;
+    letter-spacing: -0.32px;
+    line-height: 120%;
+    text-transform: none;
+
+    @include lg {
+        font-size: 48px;
+        letter-spacing: -0.48px;
+    }
+}
+
+@mixin define-h2 {
+    position: relative;
+    margin-bottom: 24px;
+    font-size: 24px;
+    font-weight: $f-weight-bold;
+    letter-spacing: -0.24px;
+    line-height: 130%;
+    text-transform: none;
+
+    &--light {
+        font-weight: $f-weight-light;
+    }
+
+    @include lg {
+        font-size: 32px;
+        letter-spacing: -0.32px;
+    }
+}
+
+@mixin define-h3 {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 20px;
+    font-weight: $f-weight-bold;
+    letter-spacing: -0.2px;
+    line-height: 130%;
+
+    @include lg {
+        font-size: 24px;
+        letter-spacing: -0.24px;
+    }
+}
+
+@mixin define-h4 {
+    margin-bottom: 24px;
+    font-size: 16px;
+    font-weight: $f-weight-bold;
+    letter-spacing: 0;
+    line-height: 130%;
+
+    @include lg {
+        font-size: 20px;
+    }
+}
+
+@mixin define-h5 {
+    margin-bottom: 24px;
+    font-size: 16px;
+    font-weight: $f-weight-bold;
+    letter-spacing: 0;
+    line-height: 130%;
+}
+
+@mixin get-mixin-h($i) {
+    @if $i == 1 {
+        @include define-h1;
+    } @else if $i == 2 {
+        @include define-h2;
+    } @else if $i == 3 {
+        @include define-h3;
+    } @else if $i == 4 {
+        @include define-h4;
+    } @else if $i == 5 {
+        @include define-h5;
+    }
+}
+
+@for $i from 1 through 5 {
+    .d#{$i} {
+        margin-top: 0;
+    }
+
+    .h#{$i} {
+        @include get-mixin-h($i);
+
+        margin-top: 0;
+    }
+}
+
+.p,
+p {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 150%;
+
+    &--bold {
+        font-weight: $f-weight-bold;
+    }
+}
+
+.introText,
+.introText p {
+    font-size: 20px;
+    font-weight: $f-weight-light;
+    line-height: 150%;
+
+    &--bold {
+        font-weight: $f-weight-medium;
+    }
+}
+
+.text,
+.text p {
+    font-size: 16px;
+    font-weight: $f-weight-regular;
+    line-height: 150%;
+
+    &--bold {
+        font-weight: $f-weight-bold;
+    }
+}
+
+small,
+.smallText,
+.smallText p {
+    font-size: 12px;
+    font-weight: $f-weight-regular;
+    line-height: 150%;
+
+    &--bold {
+        font-weight: $f-weight-bold;
+    }
+}
+
+.textXS,
+.textXS p {
+    font-size: 10px;
+    font-weight: $f-weight-regular;
+    line-height: normal;
+
+    &--bold {
+        font-weight: $f-weight-bold;
+    }
+}
+
+.a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: $f-weight-medium;
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition-duration: $d-short;
+    text-underline-offset: 8px;
+}
+
+.color {
+    &--primary {
+        color: $c-primary;
+    }
+
+    &--black {
+        color: $c-black;
+    }
+
+    &--white {
+        color: $c-white;
+    }
+
+    &--secondary {
+        color: $c-lime;
+    }
+}
+
+.text {
+    &--stroke {
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $c-black;
+    }
+
+    &--italic {
+        font-style: italic;
+    }
+
+    &--normal {
+        font-style: normal;
+    }
+
+    &--medium {
+        font-weight: $f-weight-medium;
+    }
+}
+
+.textcontentshadow {
+    position: relative;
+
+    &::before {
+        content: attr(data-title);
+        position: absolute;
+        top: -5px;
+        left: -100%;
+        font-size: 210px;
+        line-height: 80px;
+        letter-spacing: 0.02em;
+        color: rgba(255, 255, 255, 0.035);
+        white-space: nowrap;
+        z-index: -1;
+    }
+}

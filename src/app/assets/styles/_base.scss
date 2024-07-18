@@ -1,0 +1,17 @@
+@import "./fonts";
+@import "./buttons";
+@import "./layout";
+
+* {
+    &,
+    &::before,
+    &::after {
+        box-sizing: border-box;
+    }
+}
+
+body {
+    position: relative;
+    margin: 0;
+    overflow-x: hidden;
+}

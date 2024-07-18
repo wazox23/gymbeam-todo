@@ -1,0 +1,92 @@
+@import "../../assets/styles/colors";
+@import "../../assets/styles/variables";
+@import "../../assets/styles/buttons";
+@import "../../assets/styles/layout";
+@import "../../assets/styles/breakpoints";
+@import "../../assets/styles/themes";
+
+.filter-menu {
+    position: relative;
+    display: inline-block;
+
+    &__dropdown-button {
+        background-color: var(--text-color);
+        color: var(--background-color);
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s;
+        height: 40px;
+
+        &:hover {
+            background-color: var(--primary-color);
+        }
+    }
+
+    &__dropdown-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background-color: var(--background-color);
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-top: 10px;
+        padding: 10px;
+        width: 200px;
+
+        &__section {
+            margin-bottom: 10px;
+
+            &__title {
+                margin-bottom: 5px;
+                font-size: 14px;
+                font-weight: bold;
+                color: var(--text-color);
+            }
+
+            &__list {
+                list-style-type: none;
+                padding: 0;
+
+                &__item {
+                    padding: 5px 0;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+
+                    &__label {
+                        display: flex;
+                        align-items: center;
+                        color: var(--text-color);
+
+                        &__input {
+                            margin-right: 10px;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: var(--secondary-bg-color);
+                    }
+                }
+            }
+
+            &__input-date,
+            &__input-text {
+                width: 100%;
+                padding: 5px;
+                box-sizing: border-box;
+                background-color: var(--secondary-bg-color);
+                color: var(--text-color);
+                border: 1px solid var(--border-color);
+                border-radius: 4px;
+            }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+@import "./colors";
+@import "./variables";
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 32px;
+    border-radius: 360px;
+    border: 1px solid transparent;
+    background: $c-black;
+    color: $c-white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: $f-weight-bold;
+    text-align: center;
+    transition: background $d-short, color $d-extrashort;
+    letter-spacing: 0.48px;
+
+    &:hover {
+        background: $c-primary;
+        color: $c-white;
+    }
+
+    &:focus-visible {
+        outline: 2px solid $c-primary;
+        outline-offset: 2px;
+        background: $c-primary;
+    }
+
+    &--secondary {
+        background: $c-lime;
+        color: $c-black;
+
+        &:hover {
+            background: $c-black;
+        }
+
+        &:focus-visible {
+            outline: 2px solid $c-lime;
+            outline-offset: 2px;
+            color: $c-white;
+            background: $c-black;
+        }
+    }
+
+    &--small {
+        font-size: 14px;
+        letter-spacing: 0.32px;
+    }
+
+    &--outlined {
+        background: transparent;
+        color: $c-black;
+    }
+}

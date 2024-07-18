@@ -109,15 +109,15 @@ Tento projekt je jednoduchá webová aplikace pro správu to-do seznamů vytvoř
 ### TodoLists
 
 -   Tato komponenta se stará o zobrazení a správu více to-do seznamů.
--   Získává seznamy a dostupné tagy z API a ukládá je do stavu.
+-   Získává seznamy a dostupné tagy z API.
 -   Poskytuje funkce pro přidání, odstranění a přepínání mezi seznamy.
 -   Zahrnuje menu pro filtraci a tlačítko pro přepínání tématu.
 
 ### TodoList
 
 -   Tato komponenta se stará o zobrazení a správu jednoho to-do seznamu.
--   Získává to-do položky pro aktivní seznam z API a ukládá je do stavu.
--   Poskytuje funkce pro filtrování to-do položek podle stavu, priority, data splatnosti a tagů.
+-   Získává to-do položky pro aktivní seznam z API a ukládá je.
+-   Poskytuje funkce pro filtrování to-do položek podle stavu, priority, data a tagů.
 
 ### TodoItem
 
@@ -127,12 +127,12 @@ Tento projekt je jednoduchá webová aplikace pro správu to-do seznamů vytvoř
 ### TodoForm
 
 -   Tato komponenta se stará o formulář pro přidání a úpravu to-do položek.
--   Spravuje stav formuláře a zpracovává jeho odeslání, které buď přidá novou položku, nebo aktualizuje existující.
+-   Spravujenformuláře a zpracovává jeho odeslání, které buď přidá novou položku, nebo aktualizuje existující.
 
 ### FilterMenu
 
 -   Tato komponenta poskytuje rozbalovací menu pro filtrování to-do položek.
--   Umožňuje filtrování podle stavu, priority, data splatnosti a tagů.
+-   Umožňuje filtrování podle stavu, priority, data a tagů.
 -   Automaticky se zavře po kliknutí mimo menu.
 
 ## Styling
